@@ -32,6 +32,7 @@ import { AuthenticationComponent } from './core/layouts/authentication/authentic
 import { MainComponent } from './core/layouts/main/main.component';
 import { SignupComponent } from './features/signup/signup.component';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { ResetpasswordComponent } from './features/resetpassword/resetpassword.component';
 
 registerLocaleData(localePt);
 
@@ -45,7 +46,8 @@ registerLocaleData(localePt);
     LoginComponent,
     AuthenticationComponent,
     MainComponent,
-    SignupComponent
+    SignupComponent,
+    ResetpasswordComponent
   ],
   imports: [
     FormsModule,

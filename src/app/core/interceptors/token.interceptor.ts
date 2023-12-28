@@ -18,6 +18,6 @@ export class TokenInterceptor implements HttpInterceptor {
     const dupReq = request.clone({
       headers: request.headers.set('Authorization', `bearer ${token}`)
     });
-    return next.handle(request);
+    return next.handle(dupReq);
   }
 }

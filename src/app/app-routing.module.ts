@@ -6,6 +6,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { MainComponent } from './core/layouts/main/main.component';
 import { AuthenticationComponent } from './core/layouts/authentication/authentication.component';
 import { SignupComponent } from './features/signup/signup.component';
+import { ResetpasswordComponent } from './features/resetpassword/resetpassword.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
+      { path: 'resetpassword', component: ResetpasswordComponent },
     ]
   },
 ];

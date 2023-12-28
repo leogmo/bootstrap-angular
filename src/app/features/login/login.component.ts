@@ -41,7 +41,11 @@ export class LoginComponent implements OnInit {
         this.notifyService.showMessage('Informe o email para recuperar a senha');
         return;
       }
-      this.authService.passRecover(this.login.email);
+      const dto = {
+        email: this.login.email,
+        url: "http://localhost:4200/passrecover"
+      }
+      this.authService.passRecover(dto);
     } catch (error){
       console.error(error);
     }

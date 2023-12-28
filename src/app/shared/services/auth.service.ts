@@ -34,12 +34,22 @@ export class AuthService {
     })
   }
 
-  passRecover(email: string): void {
+  passRecover(dto: any): void {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     }
-    this.httpClient.post(environment.api_base_url + '/user/passrecover', {"email": email}, httpOptions).subscribe(res => {
+    this.httpClient.post(environment.api_base_url + '/user/password/recovery', JSON.stringify(dto), httpOptions).subscribe(res => {
       this.notifyService.showMessage("Um email com o link para redefinir a senha foi enviado.")
+      this.router.navigate(['login']);
+    })
+  }
+
+  updatePassword(dto: any): void {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    }
+    this.httpClient.post(environment.api_base_url + '/user/password/update', JSON.stringify(dto), httpOptions).subscribe(res => {
+      this.notifyService.showMessage("Senha alterada com sucesso.")
       this.router.navigate(['login']);
     })
   }
