@@ -1,0 +1,15 @@
+<h2>Login</h2>
+<form>
+    <input matInput placeholder="Email" [(ngModel)]="login.email" name="email" required>
+    <input matInput type="password" placeholder="Senha"  [(ngModel)]="login.password" name="senha" required>
+    <p><a class="linkRegister" (click)="passRecover()">Esqueci a senha</a></p>
+
+</form>
+<button mat-raised-button (click)="doLogin()" class="btn-primary">
+    Entrar
+</button>
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
+<p class="register">Não tem conta ? <a href="/signup" class="linkRegister">Registrar</a></p>
+

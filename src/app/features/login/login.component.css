@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+button {
+    display: inline;
+    width: 150px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+input {
+    border: 1px solid lightgray;
+    width: 280px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.linkRegister {
+    color: #69acc2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.register {
+
+    margin-top: 30px;
+}

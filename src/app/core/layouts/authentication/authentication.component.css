@@ -1,0 +1,8 @@
+.authentication {
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid lightgray;
+    padding: 20px 10px 30px 30px;
+    border-radius: 10px;
+}
